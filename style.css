@@ -1,0 +1,200 @@
+/*--------------------------CONFIGURAÇÕES DE ESTILO DA PÁGINA------------------------------------*/
+
+*{
+   margin: 3; /* Usaremos para definir a marfem*/
+   padding: 0; /* Usaremos para definir os espaçamentos entre os elementos */
+   box-sizing:4 border-box; /* Usaremos para controlar o tamanho dos elementos */
+}
+
+body{
+     font-family: Arial, Helvetica, sans-serif; /* Fontes padrão que usaremos no site */
+     line-height: 1.6; /* Espaçamento entre as linhas que usaremos para facilitar a leitura do usuário*/
+     color: #333; /* Cor que será usada nos textos */
+     background-color: #f9f9f9; /* Cor do fundo da página que utilizaremos */
+}
+
+/*---------------------CONFIGURAÇÕES DE ESTILO DO CABEÇALHO E MENU--------------------*/
+
+header {
+/*Configuração para estilizar todos os elementos que estiverem dentro de <header> do html*/
+    background: #0a3d62; /* Cor que usaremos para destacar elementos */
+    color: #fff; /* Cor que usaremos nos textos que estiverem dentro de <head> */
+    padding: 5px 10px; /* Espaçamento interno */
+    position: fixed; /* Propriedade que manterá a posição fixa no topo da tela ao rolar a página */
+    top: 0; /*Propriedade que vai alinhar as configurações no topo da página */
+    left: 0;/*Propriedade que vai definir a posição horizontal dos elementos; vai também determinar a distância dos elementos em relação à sua borda esquerda*/
+    width: 100%; /* Propriedade que mostrará o quanto as configurações aplicadas ocuparão o topo da tela */
+    z-index: 1000; /* Propriedade que vai garantir que as configurações que estabelecidas aqui, fiquem acima dos outros elementos da página */
+    display: flex; /* Layout flexível- propriedade que vai organizar e alinhar os elementos, de acordo com cada tipo de tela que o site será visualizado (responsividade) */
+    justify-content: space-around; /* Nome da empresa à esquerda e menu à direita */
+    align-items: center; /* Propriedade que centraliza os elementos verticalmente na página */
+}
+
+header h1 {
+    /*Configuração que usaremos para definir o tamanho dos elementos que estiverem como <h1> do HTML*/
+    font-size: 2.5rem; /* Propriedade que vamos usar para definir o tamanho da fonte do nome da empresa */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Deixa os itens lado a lado */
+    gap: 20px; /* Espaço entre os links */
+}
+
+nav ul li a {
+/*Configuração que usaremos para configurar os elementos <li> <a> </a> </li> do HTML*/
+    color: #ffffff; /* Muda a cor dos links */
+    text-decoration: none; /* Propriedade que usaremos para remover qualquer decoração de texto (sublinhados, sobrelinhas ou linhas)*/
+    font-weight: bold; /* Propriedade que usaremos para deixar os elementos em negrito */
+    transition: color 0.3s; /* Animação suave na mudança de cor */
+}
+
+nav ul li a:hover {
+    /*Configuração que usaremos para alterar a cor dos elementos, ao passarmos o mouse sobre eles*/
+    color: #1bcc24; /* Propriedade que define a cor em destaque ao passar o mouse */
+}
+
+/*------------------------------CONFIGURAÇÕES DAS SEÇÕES-------------------------------------*/
+
+section ul {
+/*Configuração que usaremos para configurar os elementos das Seções do HMTL*/
+    padding: 80px 20px; /* Espaçamento interno */
+    margin-top: 60px; /* Compensa o header fixo */
+    text-align: center; /* Centraliza títulos e textos */
+}
+
+section h2 {
+    color: #0a3d62; /* Determina a cor dos títulos */
+    margin-bottom: 15px; /* Define qual será o espaçamento abaixo do título */
+}
+
+/*--------------------------------LISTA DE VALORES-----------------------------------------*/
+
+section ul {
+    list-style: disc; /* Determina os marcadores das listas como bolinhas */
+    margin: 10px auto; /* Centraliza os elementos*/
+    text-align: left; /* Alinha à esquerda */
+    max-width: 600px; /* Limita largura dos elementos */
+}
+
+/*-------------------------------PRODUTO (IMAGEM)------------------------------------------*/
+
+#produto img {
+/*Configuração de todos os elementos que estiverem dentro do seletor #produto (imagem) do HTML*/
+    max-width: 400px; /* Determina o tamanho da imagem*/
+    width: 100%; /*Propriedade que usaremos para que as imagens se adaptem a telas menores */
+    margin-top: 15px;/* Propriedade que vai definir o espaço livre na parte superior do elemento HTML*/
+    border-radius: 8px; /* Propriedade que vai definir o quão arredondado será a imagem */
+    box-shadow: 0 2px 6px rgba(49, 49, 49, 0.2); /* Vai definir a cor da sombra em torno da imagem */
+}
+
+/*-----------------------------------EQUIPE-------------------------------------------*/
+
+#time {
+/*Configuração de todos os elementos que estiverem dentro do seletor #time do HTML*/
+    display: flex; /* Layout lado a lado */
+    flex-wrap: wrap; /* Permite quebrar em várias linhas */
+    justify-content: center; /* Centraliza os membros */
+    gap: 20px; /* Espaço entre membros */
+}
+
+.membro {
+    background: #fff; /* Fundo branco */
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px; /* Largura fixa */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra */
+    text-align: center;
+}
+
+.membro img {
+    width: 100px; /* Foto menor */
+    height: 100px;
+    border-radius: 30%; /* Foto redonda */
+    object-fit: cover; /* Ajusta sem distorcer */
+    margin-bottom: 10px;
+}
+
+/*----------------------------------FORMULÁRIO-----------------------------------*/
+
+form {
+/*Configura os elementos do formulário*/
+    display: flex;
+    flex-direction: column; /* Campos em coluna */
+    max-width: 400px; /* Largura máxima */
+    margin: auto; /* Centraliza */
+    background: #b96f3a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgb(255, 253, 253);
+}
+
+form label {
+/*Configura os rótulos do formulário (Nome, e-mail e mensagem)*/
+    text-align: left; /* Para alinhar o texto, nesse caso, à esquerda */
+    margin: 10px 0 5px; /* Para definir os espaçamento entre os rótulos */
+}
+
+form input, 
+/*Configura os campos de interação de inserção de dados dos usuários no formulário*/
+form textarea {
+    padding: 10px; /* Vai definir o espaço interno */
+    border: 1px solid #9c9c9c; /*Para definir a cor da borda */
+    border-radius: 5px; /*Para definir o quão arrendondados os cantos ficarão */
+    font-size: 1rem; /* Vai definir o tamanho da fonte do formulário*/
+}
+
+form textarea {
+/*Configura o campo de entrada de texto do formulário*/
+    resize: none; /* Remove o redimensionamento manual */
+    height: 100px; /* Deixa a alutra da caixa de formulário fixa */
+}
+
+form button {
+/*Configura os elementos do botão do formulário*/
+    margin-top: 15px;
+    padding: 10px;
+    background: #13961e; /*Vai definir a cor de fundo do botão */
+    color: #fff; /* Vai definir a cor do texto dentro do formulário */
+    border: none; /* Remove a borda padrão */
+    border-radius: 6px;/*Vai definir o quão arredondados serão os cantos*/
+    cursor: pointer; /* Estilo do ponteiro do mouse */
+    transition: background 0.3s;/*Mudança de cor do fundo de forma gradativa*/
+}
+
+form button:hover {
+/*Configura a cor que os elementos do formulário ficarão, ao passar o cursor sobre eles*/
+    background: #4170d6; /* Cor que ficará destacada nos elementos ao passar o mouse */
+}
+
+/*---------------------------------------RODAPÉ------------------------------------*/
+
+footer {
+/*Configura os elementos contidos no rodapé da página*/
+    background: #0d5080;/*Define a cor de fundo do rodapé*/
+    color: #fff;/*Define a cor do texto do rodapé*/
+    text-align: center;/*Define a posição do texto no rodapé*/
+    padding: 15px;/*Define o espaçamento interno entre os elementos do rodapé*/
+    margin-top: 40px;
+}
+
+/*--------------------------RESPONSIVIDADE----------------------------------*/
+
+@media (max-width: 768px) {
+/*Configura a responsividade da página*/
+    nav ul {
+        flex-direction: column; /* Torna o Menu da página em formato de coluna no celular */
+        gap: 10px;/*Define o espaço entre os elementos no layouyt da grade da página*/
+    }
+
+    #time {
+    /*Configura a responsividade de todos os elementos que estiverem dentro do seletor #time do HTML*/
+        flex-direction: row; /* Define a direção do eixo principal */
+        align-items: center;/*Alinha os elementos*/
+    }
+
+     header {
+     /*Configura a responsividade do cabeçalho*/
+        flex-direction: row; /*Define a direção do eixo principal (Nome e menu empilhados)*/
+        align-items: flex-start;
+     }

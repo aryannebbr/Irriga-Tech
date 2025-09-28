@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!--Para definir a codificação dos caracteres no site-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para deixar o site adaptado a todos os tipos de tela (deixar responsivo) -->
+    <title>Irriga Tech</title> <!--Título que aparecerá na aba do navegador-->
+    <link rel="stylesheet" href="style.css"> <!-- Para incluir um arquivo de estilos CSS externo -->
+</head>
+<body>
+
+    <!--------------------------------------------------------CABEÇALHO---------------------------------------------------------------------->
+
+       <!--------------------Usaremos a tag <header> para estruturar melhor o CABEÇALHO do site e seu conteúdo--------------------------->
+    <header>
+        <h1>Irriga Tech</h1> <!--Como se trata do Titulo da empresa, colocaremos em h1 para destaque no topo do site-->
+        <nav> <!--Como o site será no formato OnePage, usaremos essa tag para criar um menu de navegação-->
+            <ul> <!--Usaremos essa tag para montar uma lista não ordenada, usando marcadores ao invés de letras e números-->
+                <!------------ A tag <li> servirá para definir cada item da nossa lista com um marcador------------------------->
+               <li><a href="#empresa">Empresa</a></li> <!--É o link que levará o usuário a seção "Empresa"--> 
+               <!--a # foi utilizada para criar um link interno de direcionamento ao Marcador com ID "empresa" dentro da mesma página-->
+               <li><a href="#produto">Produto</a> </li> <!--É o link que levará o usuário a seção "Produto"--> 
+               <!--a # foi utilizada para criar um link interno de direcionamento ao Marcador com ID "produto" dentro da mesma página-->
+               <li><a href="#time">Equipe de Desenvolvimento</a></li> <!--É o link que levará o usuário a seção "Equipe de Desenvolvimento"-->
+               <!--a # foi utilizada para criar um link interno de direcionamento ao Marcador com ID "time" dentro da mesma página-->
+               <li><a href="#contato">Contato</a></li> <!--É o link que levará o usuário a seção "Contato"-->
+               <!--a # foi utilizada para criar um link interno de direcionamento ao Marcador com ID "contato" dentro da mesma página-->
+            </ul>
+        </nav>
+    </header>
+
+    <!---------------------------------------Estrutura do CONTEÚDO PRINCIPAL da página----------------------------------------------------->
+
+    <main> <!--Usaremos essa para identificar e delimitar o conteúdo principal do site, de forma mais estruturada-->
+    
+    <!---------SEÇÃO EMPRESA-------------->
+     <section id="empresa"></section>
+     <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
+
+      <h2>Sobre a Irriga Tech</h2> <!--É o subtítulo da seção -->
+      <p>A Irriga Tech oferece soluções de irrigação inteligente para hortas domésticas e plantas em apartamentos.</p>
+    
+      <h3>Missão</h3> <!--Precisamos definir a Missão da empresa-->
+      <p>Trazer tecnologia acessível para o cuidado sustentável das plantas.</p> <!--Parágrafo de descrição da Missão da empresa-->
+
+      <h3>Visão</h3> <!--Precisamos definir a Visão da empresa-->
+      <p>Ser a referência no mercado brasileiro de irrigação IoT para pequenas hortas.</p>
+
+       <h3>Valores</h3>
+            <ul> <!-- Lista não ordenada -->
+                <li><br>Inovação</li> <!--subtópico de descrição-->
+                <p>--------------------------</p>
+                <li><br>Sustentabilidade</li> <!--subtópico de descrição-->
+                <p>----------------------------</p>
+                <li><br>Acessibilidade</li> <!--subtópico de descrição-->
+                <p>---------------------</p>
+                <li><br>Comprometimento</li> <!--subtópico de descrição-->
+                <p>--------------------------------</p>
+      </ul>
+     </section>
+
+     <!------SEÇÃO EQUIPE DE DESENVOLVIMENTO------>
+      <section id="time">
+      <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
+      
+     <h2>Equipe de Desenvolvimento</h2><!--Apresentaão de cada um dos integrantes da equipe-->
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Aryanne Baptistin Barbosa Ribeiro</h3>
+         <p>Front-End Developer</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Hugo Arrais de Moura Silva</h3>
+         <p>Front-End Developer</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Julia Cristina da Costa</h3>
+         <p>Front-End Developer</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Júlio Cézar de Souza Barbosa</h3>
+         <p>Front-End Developer</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Gabriel de Santana Santos</h3>
+         <p>Documentação</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Kamily Silva da Rocha</h3>
+         <p>Documentação</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Matheus Porto</h3>
+         <p>IoT</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Raphael Morais da Silva</h3>
+         <p>IoT</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Thiago Aparecido Oliveira de Araujo</h3>
+         <p>IoT</p>
+
+      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Vinicius Vieira Lionel</h3>
+         <p>IoT</p>
+    </section>
+
+     <!-------------------------------------------------------FORMULÁRIO---------------------------------------------------------------->
+     <section id="contato">
+     <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
+
+       <h2>Entre em Contato</h2><!--Formulário para que o usuário entre em contato conosco-->
+        <form action="enviar.php" method="POST"> <!--Tag utilizada para simularmos o envio do formulário para a área backend -->
+          <label for="nome">Nome:</label>
+           <input type="text" id="nome" name="nome" required> <!--Campo obrigatório para o usuário inserir seu nome-->
+                
+          <label for="email">E-mail:</label>
+           <input type="email" id="email" name="email" required> <!--Campo obrigatório para o usuário inserir seu endereço de e-mail-->
+                
+          <label for="mensagem">Mensagem:</label>
+           <textarea id="mensagem" name="mensagem" required></textarea> <!--Campo obrigatório para o usuário inserir a mensagem/dúvida que deseja nos enviar-->
+                
+            <button type="submit">Enviar</button> <!--Tag do botão de "Enviar" o formulário -->
+     </form>
+    </section>
+   </main>
+
+   <!---------------------------------------------------RODAPÉ DA PÁGINA--------------------------------------------------------------->
+
+   <footer> <!--Usaremos essa tag para definir o rodapé da página web-->
+     =<p>&copy; 2025 Irriga Tech. Todos os direitos reservados.</p> <!-- Tag usada para colocar Direitos autorais a página-->
+   </footer>
+
+   <!-------------------------------------------------------SCRIPTS-------------------------------------------------------------------->
+
+   <script src="script.js"></script> <!---Para importarmos o arquivo de JavaScript a página--->
+
+ </body>
+</html> 
