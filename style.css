@@ -17,6 +17,12 @@ body{
 
 header {
 /*Configuração para estilizar todos os elementos que estiverem dentro de <header> do html*/
+
+.logo img {
+    width: 100px; /* tamanho da logo */
+    height: auto;
+}
+    
     background: #0a3d62; /* Cor que usaremos para destacar elementos */
     color: #fff; /* Cor que usaremos nos textos que estiverem dentro de <head> */
     padding: 5px 10px; /* Espaçamento interno */
@@ -191,11 +197,11 @@ footer {
     /*Configura a responsividade de todos os elementos que estiverem dentro do seletor #time do HTML*/
         flex-direction: row; /* Define a direção do eixo principal */
         align-items: center;/*Alinha os elementos*/
-    }
+    } 
 
      header {
      /*Configura a responsividade do cabeçalho*/
         flex-direction: row; /*Define a direção do eixo principal (Nome e menu empilhados)*/
         align-items: flex-start;
+     }
     }
- }
