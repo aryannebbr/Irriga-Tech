@@ -19,7 +19,7 @@ header {
 /*Configuração para estilizar todos os elementos que estiverem dentro de <header> do html*/
 
 .logo img {
-    width: 100px; /* tamanho da logo */
+    width: 200px; /* tamanho da logo */
     height: auto;
 }
     
