@@ -197,4 +197,5 @@ footer {
      /*Configura a responsividade do cabeçalho*/
         flex-direction: row; /*Define a direção do eixo principal (Nome e menu empilhados)*/
         align-items: flex-start;
-     }
+    }
+ }
