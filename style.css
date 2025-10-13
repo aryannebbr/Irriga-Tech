@@ -1,44 +1,71 @@
 /*--------------------------CONFIGURAÇÕES DE ESTILO DA PÁGINA------------------------------------*/
 
 *{
-   margin: 3; /* Usaremos para definir a marfem*/
+   margin: 0; /* Usaremos para definir a margem */
    padding: 0; /* Usaremos para definir os espaçamentos entre os elementos */
-   box-sizing:4 border-box; /* Usaremos para controlar o tamanho dos elementos */
+   box-sizing: border-box; /* Usaremos para controlar o tamanho dos elementos */
+}
+
+/*será usada para padronizar as cores */
+:root {
+  --verde: rgb(76, 175, 80); /* verde planta */
+  --verde-claro: rgb(165, 214, 167);
+  --azul: rgb(2, 119, 189); /* azul tecnológico */
+  --branco: rgb(255, 255, 255); /* fundo claro tipo solo */
+  --cinza: rgb(46, 46, 46); /* texto */
+  --azul-claro: rgb(88, 7, 249);
+  --marrom-escuro: rgb(88, 47, 14);
+  --marrom-claro: rgb(147, 102, 57);
 }
 
 body{
      font-family: Arial, Helvetica, sans-serif; /* Fontes padrão que usaremos no site */
      line-height: 1.6; /* Espaçamento entre as linhas que usaremos para facilitar a leitura do usuário*/
-     color: #333; /* Cor que será usada nos textos */
-     background-color: #f9f9f9; /* Cor do fundo da página que utilizaremos */
+     color: var(--cinza); /* Cor que será usada nos textos */
+    background: linear-gradient(to bottom, rgb(245, 245, 220), rgb(233, 245, 236)); /* Cor do fundo da página que utilizaremos */
 }
 
 /*---------------------CONFIGURAÇÕES DE ESTILO DO CABEÇALHO E MENU--------------------*/
 
 header {
 /*Configuração para estilizar todos os elementos que estiverem dentro de <header> do html*/
-
-.logo img {
-    width: 200px; /* tamanho da logo */
-    height: auto;
-}
-    
-    background: #0a3d62; /* Cor que usaremos para destacar elementos */
-    color: #fff; /* Cor que usaremos nos textos que estiverem dentro de <head> */
-    padding: 5px 10px; /* Espaçamento interno */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient( to left, var(--azul), var(--verde)); /* Cor que usaremos para destacar elementos */
+    color: rgb(255, 255, 255); /* Cor que usaremos nos textos que estiverem dentro de <head> */
+    padding: 15px 30px; /* Espaçamento interno */
     position: fixed; /* Propriedade que manterá a posição fixa no topo da tela ao rolar a página */
     top: 0; /*Propriedade que vai alinhar as configurações no topo da página */
     left: 0;/*Propriedade que vai definir a posição horizontal dos elementos; vai também determinar a distância dos elementos em relação à sua borda esquerda*/
     width: 100%; /* Propriedade que mostrará o quanto as configurações aplicadas ocuparão o topo da tela */
     z-index: 1000; /* Propriedade que vai garantir que as configurações que estabelecidas aqui, fiquem acima dos outros elementos da página */
     display: flex; /* Layout flexível- propriedade que vai organizar e alinhar os elementos, de acordo com cada tipo de tela que o site será visualizado (responsividade) */
-    justify-content: space-around; /* Nome da empresa à esquerda e menu à direita */
+    justify-content: space-between; /* logo centralizada */
     align-items: center; /* Propriedade que centraliza os elementos verticalmente na página */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+main{
+    padding-top: 100px; /*está tag está sendo usada para o melhorar a rolagem da pagina */
 }
 
 header h1 {
     /*Configuração que usaremos para definir o tamanho dos elementos que estiverem como <h1> do HTML*/
-    font-size: 2.5rem; /* Propriedade que vamos usar para definir o tamanho da fonte do nome da empresa */
+    font-size: 2.2rem; /* Propriedade que vamos usar para definir o tamanho da fonte do nome da empresa */
+    letter-spacing: 1px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header h1{
+    height: 50px;
 }
 
 nav ul {
@@ -49,29 +76,56 @@ nav ul {
 
 nav ul li a {
 /*Configuração que usaremos para configurar os elementos <li> <a> </a> </li> do HTML*/
-    color: #ffffff; /* Muda a cor dos links */
+    color: var(--branco); /* Muda a cor dos links */
     text-decoration: none; /* Propriedade que usaremos para remover qualquer decoração de texto (sublinhados, sobrelinhas ou linhas)*/
     font-weight: bold; /* Propriedade que usaremos para deixar os elementos em negrito */
     transition: color 0.3s; /* Animação suave na mudança de cor */
+    position: relative;
 }
 
 nav ul li a:hover {
     /*Configuração que usaremos para alterar a cor dos elementos, ao passarmos o mouse sobre eles*/
-    color: #1bcc24; /* Propriedade que define a cor em destaque ao passar o mouse */
+    color: var(--verde); /* Propriedade que define a cor em destaque ao passar o mouse */
 }
 
+nav ul li a::after { /* cria um sublinhado ao passar o mouse no cabeçalho */
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--branco);
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* Cor para mostrar em qual seção está */
+nav ul li a.ativo {
+    color: var(--cinza);
+}
 /*------------------------------CONFIGURAÇÕES DAS SEÇÕES-------------------------------------*/
 
-section ul {
+section {
 /*Configuração que usaremos para configurar os elementos das Seções do HMTL*/
-    padding: 80px 20px; /* Espaçamento interno */
+    padding: 100px 20px; /* Espaçamento interno */
     margin-top: 60px; /* Compensa o header fixo */
     text-align: center; /* Centraliza títulos e textos */
+    scroll-margin-top: 120px; /* Ajusta a posição final da rolagem, considerando o header fixo */
+}
+
+html{
+    scroll-behavior: smooth; /*Rolagem suave */
 }
 
 section h2 {
-    color: #0a3d62; /* Determina a cor dos títulos */
-    margin-bottom: 15px; /* Define qual será o espaçamento abaixo do título */
+    color: var(--azul); /* Determina a cor dos títulos */
+    margin-bottom: 25px; /* Define qual será o espaçamento abaixo do título */
+    font-size: 1.8rem;
+    color: var(--azul);
 }
 
 /*--------------------------------LISTA DE VALORES-----------------------------------------*/
@@ -105,17 +159,22 @@ section ul {
 }
 
 .membro {
-    background: #fff; /* Fundo branco */
-    padding: 15px;
-    border-radius: 10px;
-    width: 200px; /* Largura fixa */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra */
+    background: rgb(255, 255, 255); /* Fundo branco */
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px; /* Largura fixa */
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra */
     text-align: center;
+    transition: transform 0.3s;
+}
+.membro:hover {
+    transform: translateY(-15px);
 }
 
-.membro img {
-    width: 100px; /* Foto menor */
-    height: 100px;
+img {
+    width: 80px; /* Foto menor */
+    height: 120px;
     border-radius: 30%; /* Foto redonda */
     object-fit: cover; /* Ajusta sem distorcer */
     margin-bottom: 10px;
@@ -129,7 +188,7 @@ form {
     flex-direction: column; /* Campos em coluna */
     max-width: 400px; /* Largura máxima */
     margin: auto; /* Centraliza */
-    background: #b96f3a;
+    background: linear-gradient(to top, var(--marrom-claro), var(--marrom-escuro));
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgb(255, 253, 253);
@@ -145,7 +204,7 @@ form input,
 /*Configura os campos de interação de inserção de dados dos usuários no formulário*/
 form textarea {
     padding: 10px; /* Vai definir o espaço interno */
-    border: 1px solid #9c9c9c; /*Para definir a cor da borda */
+    border: 1px solid rgb(156, 156, 156); /*Para definir a cor da borda */
     border-radius: 5px; /*Para definir o quão arrendondados os cantos ficarão */
     font-size: 1rem; /* Vai definir o tamanho da fonte do formulário*/
 }
@@ -160,28 +219,60 @@ form button {
 /*Configura os elementos do botão do formulário*/
     margin-top: 15px;
     padding: 10px;
-    background: #13961e; /*Vai definir a cor de fundo do botão */
-    color: #fff; /* Vai definir a cor do texto dentro do formulário */
+    background: var(--azul); /*Vai definir a cor de fundo do botão */
+    color: rgb(255, 255, 255); /* Vai definir a cor do texto dentro do formulário */
     border: none; /* Remove a borda padrão */
     border-radius: 6px;/*Vai definir o quão arredondados serão os cantos*/
     cursor: pointer; /* Estilo do ponteiro do mouse */
-    transition: background 0.3s;/*Mudança de cor do fundo de forma gradativa*/
+    transition: 0.3s;/*Mudança de cor do fundo de forma gradativa*/
 }
 
 form button:hover {
 /*Configura a cor que os elementos do formulário ficarão, ao passar o cursor sobre eles*/
-    background: #4170d6; /* Cor que ficará destacada nos elementos ao passar o mouse */
+    background: var(--azul-claro); /* Cor que ficará destacada nos elementos ao passar o mouse */
 }
 
 /*---------------------------------------RODAPÉ------------------------------------*/
 
 footer {
-/*Configura os elementos contidos no rodapé da página*/
-    background: #0d5080;/*Define a cor de fundo do rodapé*/
-    color: #fff;/*Define a cor do texto do rodapé*/
-    text-align: center;/*Define a posição do texto no rodapé*/
-    padding: 15px;/*Define o espaçamento interno entre os elementos do rodapé*/
+    background: linear-gradient(to right, var(--azul), var(--verde));
+    color: rgb(255, 255, 255); /* Texto branco */
+    text-align: center;
+    padding: 15px;
     margin-top: 40px;
+}
+
+/*--------------------------Botão voltar ao topo----------------------------------*/
+
+.btn-topo{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--verde);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: none;
+}
+
+.btn-topo.vísivel {
+    display: block;
+}
+
+/*--------------------------Seção modo escuro----------------------------------*/
+
+.dark-mode{
+    background: rgb(34, 34, 34);
+    color: rgb(238, 238, 238);
+}
+.tema-btn {
+    margin-left: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
 }
 
 /*--------------------------RESPONSIVIDADE----------------------------------*/
@@ -191,6 +282,12 @@ footer {
     nav ul {
         flex-direction: column; /* Torna o Menu da página em formato de coluna no celular */
         gap: 10px;/*Define o espaço entre os elementos no layouyt da grade da página*/
+        text-align: center; /* Alinha o texto ao centro */
+    }
+
+    nav ul li a{ /* Deixa o site em diferentes tamnho mais responsivo */
+        display: block;
+        padding: 10px;
     }
 
     #time {
@@ -201,7 +298,7 @@ footer {
 
      header {
      /*Configura a responsividade do cabeçalho*/
-        flex-direction: row; /*Define a direção do eixo principal (Nome e menu empilhados)*/
-        align-items: flex-start;
+        flex-direction: column; /*Define a direção do eixo principal (Nome e menu empilhados)*/
+        align-items: center;
      }
     }
