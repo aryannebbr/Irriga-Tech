@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para deixar o site adaptado a todos os tipos de tela (deixar responsivo) -->
     <title>Irriga Tech</title> <!--Título que aparecerá na aba do navegador-->
     <link rel="stylesheet" href="style.css"> <!-- Para incluir um arquivo de estilos CSS externo -->
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="irriga_symbol_centered_128x128.ico" type="image/x-icon">
 </head>
 <body>
-
     <!--------------------------------------------------------CABEÇALHO---------------------------------------------------------------------->
 
     <header> <!--Usaremos a tag <header> para estruturar melhor o CABEÇALHO do site e seu conteúdo-->
-
-        <h1>Irriga Tech</h1> <!--Como se trata do Titulo da empresa, colocaremos em h1 para destaque no topo do site-->
+   <div class="logo-container">
+      <img src="logo.png" alt="Logo da Irriga Tech" class="logo">
+   </div>
         <nav> <!--Como o site será no formato OnePage, usaremos essa tag para criar um menu de navegação-->
-            <ul> <!--Usaremos essa tag para montar uma lista não ordenada, usando marcadores ao invés de letras e números-->
+            <ul class="menu"> <!--Usaremos essa tag para montar uma lista não ordenada, usando marcadores ao invés de letras e números-->
                 <!------------ A tag <li> servirá para definir cada item da nossa lista com um marcador------------------------->
                <li><a href="#empresa">Empresa</a></li> <!--É o link que levará o usuário a seção "Empresa"--> 
                <!--a # foi utilizada para criar um link interno de direcionamento ao Marcador com ID "empresa" dentro da mesma página-->
@@ -32,14 +32,14 @@
     <!---------------------------------------Estrutura do CONTEÚDO PRINCIPAL da página----------------------------------------------------->
 
     <main> <!--Usaremos essa para identificar e delimitar o conteúdo principal do site, de forma mais estruturada-->
-    
+
     <!---------SEÇÃO EMPRESA-------------->
-     <section id="empresa"></section>
+     <section id="empresa">
      <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
 
       <h2>Sobre a Irriga Tech</h2> <!--É o subtítulo da seção -->
       <p>A Irriga Tech oferece soluções de irrigação inteligente para hortas domésticas e plantas em apartamentos.</p>
-    
+
       <h3>Missão</h3> <!--Precisamos definir a Missão da empresa-->
       <p>Trazer tecnologia acessível para o cuidado sustentável das plantas.</p> <!--Parágrafo de descrição da Missão da empresa-->
 
@@ -59,62 +59,78 @@
       </ul>
      </section>
 
+   <!--------SEÇÃO SOBRE O PRODUTO----->
+<section id="produto">
+  <h2>Nosso Produto</h2>
+  <p>O sistema Irriga Tech monitora e irriga automaticamente suas plantas com base na umidade do solo, usando sensores IoT.</p>
+</section>
+
      <!------SEÇÃO EQUIPE DE DESENVOLVIMENTO------>
       <section id="time">
       <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
-      
+
      <h2>Equipe de Desenvolvimento</h2><!--Apresentação de cada um dos integrantes da equipe-->
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
        <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
         <h3>Aryanne Baptistin Barbosa Ribeiro</h3>
          <p>Front-End Developer</p>
+      </article>
 
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
-        <h3>Hugo Arrais de Moura Silva</h3>
-         <p>Front-End Developer</p>
-
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
-        <h3>Julia Cristina da Costa</h3>
-         <p>Front-End Developer</p>
-
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
-        <h3>Júlio Cézar de Souza Barbosa</h3>
-         <p>Front-End Developer</p>
-
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+      <article class="membro"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+        <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
         <h3>Gabriel de Santana Santos</h3>
          <p>Documentação</p>
+      </article> 
 
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Hugo Arrais de Moura Silva</h3>
+         <p>Front-End Developer</p>
+      </article>
+
+      <article class="membro"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Julia Cristina da Costa</h3>
+         <p>Front-End Developer</p>
+      </article> 
+
+      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+        <h3>Júlio Cézar de Sousa Barbosa</h3>
+         <p>Front-End Developer</p>
+      </article>
+
+      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
         <h3>Kamily Silva da Rocha</h3>
          <p>Documentação</p>
+      </article>
 
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
         <h3>Matheus Porto</h3>
          <p>IoT</p>
+      </article>
 
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
         <h3>Raphael Morais da Silva</h3>
          <p>IoT</p>
+      </article>
 
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
         <h3>Thiago Aparecido Oliveira de Araujo</h3>
          <p>IoT</p>
+      </article>
 
-      <article class="membro"></article> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
         <h3>Vinicius Vieira Lionel</h3>
          <p>IoT</p>
-    </section>
+      </article>
 
+    </section>
      <!-------------------------------------------------------FORMULÁRIO---------------------------------------------------------------->
      <section id="contato">
      <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
@@ -123,13 +139,13 @@
         <form action="enviar.php" method="POST"> <!--Tag utilizada para simularmos o envio do formulário para a área backend -->
           <label for="nome">Nome:</label>
            <input type="text" id="nome" name="nome" required> <!--Campo obrigatório para o usuário inserir seu nome-->
-                
+
           <label for="email">E-mail:</label>
            <input type="email" id="email" name="email" required> <!--Campo obrigatório para o usuário inserir seu endereço de e-mail-->
-                
+
           <label for="mensagem">Mensagem:</label>
            <textarea id="mensagem" name="mensagem" required></textarea> <!--Campo obrigatório para o usuário inserir a mensagem/dúvida que deseja nos enviar-->
-                
+
             <button type="submit">Enviar</button> <!--Tag do botão de "Enviar" o formulário -->
      </form>
     </section>
@@ -138,12 +154,11 @@
    <!---------------------------------------------------RODAPÉ DA PÁGINA--------------------------------------------------------------->
 
    <footer> <!--Usaremos essa tag para definir o rodapé da página web-->
-     =<p>&copy; 2025 Irriga Tech. Todos os direitos reservados.</p> <!-- Tag usada para colocar Direitos autorais a página-->
+     <p>&copy; 2025 Irriga Tech. Todos os direitos reservados.</p> <!-- Tag usada para colocar Direitos autorais a página-->
    </footer>
 
    <!-------------------------------------------------------SCRIPTS-------------------------------------------------------------------->
-
-   <script src="script.js"></script> <!---Para importarmos o arquivo de JavaScript a página--->
+ <!---Para importarmos o arquivo de JavaScript a página--->
+   <script src="script.js"></script>
 
  </body>
-</html> 
