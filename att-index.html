@@ -91,6 +91,20 @@
   <p>O sistema Irriga Tech monitora e irriga automaticamente suas plantas com base na umidade do solo, usando sensores IoT.</p>
 </section>
 
+   <!-- SEÇÃO SIMULADOR DE IRRIGAÇÃO -->
+<section id="simulador">
+  <h2>Simulação de Irrigação <em>Automática</em></h2> <!--"Simulação de Irrigação Automática” será o título principal do simulador--->
+  <p>Veja abaixo como nosso sistema de irrigação inteligente reage à variação da umidade do solo.</p><!---Explica ao usuário o que o simulador faz — mostra como o sistema reage à mudança de umidade-->
+  <p><strong>Umidade do solo:</strong> <span id="umidade">--</span>%</p> <!---<strong> deixa o texto em negrito, destacando “Umidade do solo”.-->
+  <div id="progressBarContainer"> <!--<div id="progressBarContainer"> é o container (caixa externa) da barra.-->
+    <div id="progressBar"></div> <!--<div id="progressBar"></div> é a barra em si, que o JavaScript vai aumentar ou diminuir conforme o nível de umidade.
+— Exemplo: se a umidade for 80%, a largura da barra será 80%.-->
+  </div>
+  <p id="status">Status: Aguardando início...</p> <!--Mostra o estado atual da simulação.-->
+<button id="iniciarBtn">Iniciar Simulação</button> <!--Cria um botão que o usuário pode clicar para iniciar a simulação.
+O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e começar a alterar os valores na tela.-->
+</section>
+
      <!------SEÇÃO EQUIPE DE DESENVOLVIMENTO------>
       <section id="time">
       <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
