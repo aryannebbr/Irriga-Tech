@@ -6,22 +6,24 @@
    box-sizing: border-box; /* Usaremos para controlar o tamanho dos elementos */
 }
 
-/*será usada para padronizar as cores */
+/* Alguns padroes de cores */
 :root {
   --verde: rgb(76, 175, 80); /* verde planta */
-  --verde-claro: rgb(165, 214, 167);
+  --verde-claro: rgb(100, 150, 90); 
   --azul: rgb(2, 119, 189); /* azul tecnológico */
   --branco: rgb(255, 255, 255); /* fundo claro tipo solo */
-  --cinza: rgb(46, 46, 46); /* texto */
+  --preto: rgb(0,0,0,); /* Texto */
+  --cinza: rgb(50, 50, 50); /* texto ao selecionar no cabeçalho */
   --azul-claro: rgb(88, 7, 249);
   --marrom-escuro: rgb(88, 47, 14);
   --marrom-claro: rgb(147, 102, 57);
+  --marrom-clarinho: rgb(139,94,52);
 }
 
 body{
      font-family: Arial, Helvetica, sans-serif; /* Fontes padrão que usaremos no site */
      line-height: 1.6; /* Espaçamento entre as linhas que usaremos para facilitar a leitura do usuário*/
-     color: var(--cinza); /* Cor que será usada nos textos */
+     color: var(--preto); /* Cor que será usada nos textos */
     background: linear-gradient(to bottom, rgb(245, 245, 220), rgb(233, 245, 236)); /* Cor do fundo da página que utilizaremos */
 }
 
@@ -33,7 +35,7 @@ header {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient( to left, var(--azul), var(--verde)); /* Cor que usaremos para destacar elementos */
+    background: linear-gradient( to right,rgb(181, 228, 140),rgb(153, 217, 140),rgb(118, 200, 147),rgb(82, 182, 154), rgb(52, 160, 164), rgb(22, 138, 173),rgb(26, 117, 159),rgb(30, 96, 145), rgb(24, 78, 119));
     color: rgb(255, 255, 255); /* Cor que usaremos nos textos que estiverem dentro de <head> */
     padding: 15px 30px; /* Espaçamento interno */
     position: fixed; /* Propriedade que manterá a posição fixa no topo da tela ao rolar a página */
@@ -148,6 +150,71 @@ section ul {
     box-shadow: 0 2px 6px rgba(49, 49, 49, 0.2); /* Vai definir a cor da sombra em torno da imagem */
 }
 
+/*-------------------------------Seção simulador------------------------------------------*/
+
+#simulador { /*Estilo geral da seção do simulador*/
+  text-align: center; /*centraliza todo o conteúdo (títulos, textos, botão).*/
+  background: rgb(150, 226, 182); /*define o fundo verde-claro da seção.*/
+  padding: 60px 20px; /*cria espaço interno (distância entre o conteúdo e as bordas da caixa).*/
+  border-radius: 10px; /*deixa os cantos arredondados*/
+  margin: 40px auto; /*cria espaço em volta da seção e a centraliza horizontalmente.*/
+  max-width: 700px; /*limita a largura máxima (para não ficar esticado demais em telas grandes).*/
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /*adiciona uma sombra suave, dando leve efeito de profundidade.*/
+}
+
+#simulador h2 { /*Título principal da seção*/
+  color: rgb(3, 67, 112); /*Define a cor do título como azul-escuro (#034370).*/
+  margin-bottom: 10px; /*Adiciona uma margem inferior de 10px para separar o título do texto logo abaixo.*/
+}
+
+#simulador p { /*Parágrafos dentro do simulador*/
+  color: #333; /*Cor do texto em cinza escuro (#333)*/
+  margin: 10px 0; /*Margem superior e inferior de 10px para espaçamento entre parágrafos.*/
+}
+
+#progressBarContainer { /*Contêiner (caixa) da barra de progresso*/
+  width: 80%; /*ocupa 80% da largura da seção.*/ 
+  max-width: 500px; /*nunca passa de 500px de largura.*/
+  height: 25px; /*define a altura da barra.*/
+  background-color: #ddd; /*fundo cinza claro da barra.*/
+  border-radius: 20px;  /*cantos arredondados da barra.*/
+  margin: 20px auto; /*centraliza horizontalmente e adiciona espaço acima e abaixo.*/
+  overflow: hidden; /*esconde qualquer parte da barra que ultrapasse o contêiner (essencial pro efeito visual da barra crescendo).*/
+}
+
+#progressBar { /*A própria barra de progresso (parte verde que cresce)*/
+  width: 0%;  /*Começa com width: 0%; → ou seja, vazia no início.*/ 
+  height: 100%; /*ocupa toda a altura da barra.*/
+  background-color: #27ae60; /*verde representando a umidade.*/
+  transition: width 0.5s; /*faz a barra crescer de forma suave (animação de 0.5 segundos).*/
+}
+
+#status { /*Texto do status*/
+  font-weight: bold; /*deixa em negrito.*/
+  margin-top: 10px; /*adiciona espaço acima (separando da barra).*/ 
+}
+
+#iniciarBtn { /*Botão de iniciar*/
+  background-color: #27ae60; /*verde igual à barra de progresso.*/
+  color: white; /*texto branco.*/
+  padding: 10px 25px; /*espaço interno, deixando o botão maior e mais clicável.*/
+  border: none; /*remove a borda padrão.*/
+  border-radius: 8px; /*cantos arredondados.*/
+  cursor: pointer; /*mostra a “mãozinha” quando o mouse passa por cima.*/ 
+  font-size: 16px; /*aumenta o tamanho da fonte.*/
+  margin-top: 15px; /*espaço acima.*/
+  transition: background 0.3s; /*suaviza a mudança de cor*/
+}
+
+#iniciarBtn:hover { /*Efeito quando o mouse passa por cima*/
+  background-color: #034370; /*Muda o fundo do botão para azul escuro (#034370) quando o usuário passa o mouse, dando sensação de interação.*/
+}
+
+#iniciarBtn:disabled {
+  background-color: #95a5a6; /*cinza, indicando que não pode ser clicado.*/
+  cursor: not-allowed; /*muda o cursor para um ícone de “proibido”.*/
+}
+
 /*-----------------------------------EQUIPE-------------------------------------------*/
 
 #time {
@@ -166,7 +233,7 @@ section ul {
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra */
     text-align: center;
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
 .membro:hover {
     transform: translateY(-15px);
@@ -188,7 +255,7 @@ form {
     flex-direction: column; /* Campos em coluna */
     max-width: 400px; /* Largura máxima */
     margin: auto; /* Centraliza */
-    background: linear-gradient(to top, var(--marrom-claro), var(--marrom-escuro));
+    background: linear-gradient(to top, rgb(181, 121, 83), rgb(169, 111, 74), rgb(157, 100, 65), rgb(146, 91, 58), rgb(135, 82, 51), rgb(112, 63, 37), rgb(103, 56, 32), rgb(94, 48, 26), rgb(85, 41, 20), rgb(79, 36, 16));
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgb(255, 253, 253);
@@ -219,7 +286,7 @@ form button {
 /*Configura os elementos do botão do formulário*/
     margin-top: 15px;
     padding: 10px;
-    background: var(--azul); /*Vai definir a cor de fundo do botão */
+    background: var(--verde); /*Vai definir a cor de fundo do botão */
     color: rgb(255, 255, 255); /* Vai definir a cor do texto dentro do formulário */
     border: none; /* Remove a borda padrão */
     border-radius: 6px;/*Vai definir o quão arredondados serão os cantos*/
@@ -229,13 +296,13 @@ form button {
 
 form button:hover {
 /*Configura a cor que os elementos do formulário ficarão, ao passar o cursor sobre eles*/
-    background: var(--azul-claro); /* Cor que ficará destacada nos elementos ao passar o mouse */
+    background: var(--verde-claro); /* Cor que ficará destacada nos elementos ao passar o mouse */
 }
 
 /*---------------------------------------RODAPÉ------------------------------------*/
 
 footer {
-    background: linear-gradient(to right, var(--azul), var(--verde));
+    background: linear-gradient(to left, rgb(181, 228, 140),rgb(153, 217, 140),rgb(118, 200, 147),rgb(82, 182, 154), rgb(52, 160, 164), rgb(22, 138, 173),rgb(26, 117, 159),rgb(30, 96, 145), rgb(24, 78, 119));
     color: rgb(255, 255, 255); /* Texto branco */
     text-align: center;
     padding: 15px;
@@ -248,15 +315,15 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var(--verde);
+    background: var(--cinza);
     color: white;
     border: none;
     border-radius: 50%;
     padding: 10px 15px;
-    cursor: none;
+    cursor: pointer;
 }
 
-.btn-topo.vísivel {
+.btn-topo.visivel {
     display: block;
 }
 
@@ -267,12 +334,12 @@ footer {
     color: rgb(238, 238, 238);
 }
 .tema-btn {
-    margin-left: 15px;
+    margin-left: 1.3px;
     background: transparent;
     border: none;
     color: white;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 /*--------------------------RESPONSIVIDADE----------------------------------*/
