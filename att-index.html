@@ -6,6 +6,8 @@
     <title>Irriga Tech</title> <!--Título que aparecerá na aba do navegador-->
     <link rel="stylesheet" href="style.css"> <!-- Para incluir um arquivo de estilos CSS externo -->
     <link rel="shortcut icon" href="imgaba.png" type="image/x-icon">
+
+    
 </head>
 <body>
     <!--------------------------------------------------------CABEÇALHO---------------------------------------------------------------------->
@@ -176,18 +178,39 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
      <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
 
        <h2>Entre em Contato</h2><!--Formulário para que o usuário entre em contato conosco-->
-        <form action="enviar.php" method="POST"> <!--Tag utilizada para simularmos o envio do formulário para a área backend -->
-          <label for="nome">Nome:</label>
-           <input type="text" id="nome" name="nome" required> <!--Campo obrigatório para o usuário inserir seu nome-->
+       <form id="meuFormulario">
+  <input type="text" name="nome" placeholder="Seu Nome" required>
+  <input type="email" name="email" placeholder="Seu Email" required>
 
-          <label for="email">E-mail:</label>
-           <input type="email" id="email" name="email" required> <!--Campo obrigatório para o usuário inserir seu endereço de e-mail-->
+  <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
 
-          <label for="mensagem">Mensagem:</label>
-           <textarea id="mensagem" name="mensagem" required></textarea> <!--Campo obrigatório para o usuário inserir a mensagem/dúvida que deseja nos enviar-->
+  <button type="submit">Enviar</button> <!--Tag do botão de "Enviar" o formulário -->
+        </form>
+        <script>
+  const form = document.getElementById('meuFormulario');
+  const googleScriptURL = 'https://script.google.com/macros/s/AKfycbzr7qg_nMxMsbbRk2G17IoPX1r4oMB2ShklJNGct5da77BRxJg7pgahkfUbdHIHwQ1DjQ/exec'; // Cole a URL copiada aqui
 
-            <button type="submit">Enviar</button> <!--Tag do botão de "Enviar" o formulário -->
-     </form>
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Impede o envio padrão
+
+    const formData = new FormData(form);
+    
+    fetch(googleScriptURL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Sucesso!', data);
+      alert('Dados enviados com sucesso!');
+      form.reset(); // Opcional: limpa o formulário
+    })
+    .catch(error => {
+      console.error('Erro:', error);
+      alert('Ocorreu um erro ao enviar os dados.');
+    });
+  });
+</script>
     </section>
    </main>
 
@@ -200,5 +223,5 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
    <!-------------------------------------------------------SCRIPTS-------------------------------------------------------------------->
  <!---Para importarmos o arquivo de JavaScript a página--->
    <script src="script.js"></script>
-
  </body>
+

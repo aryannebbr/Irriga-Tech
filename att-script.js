@@ -1,4 +1,3 @@
-
 /*--------------------------DESTAQUE NO MENU AO ROLAR A PÁGINA-----------------------------*/
 
 document.addEventListener("scroll", () => {
@@ -29,22 +28,54 @@ document.addEventListener("scroll", () => {
 });
 
 /*--------------------------VALIDAÇÃO DO FORMULÁRIO--------------------------------*/
-
 const form = document.querySelector("form");
+// ATENÇÃO: Substitua pelo link gerado após Implantação (Deploy) do Apps Script!
+const googleScriptURL = 'https://script.google.com/macros/s/AKfycbzr7qg_nMxMsbbRk2G17IoPX1r4oMB2ShklJNGct5da77BRxJg7pgahkfUbdHIHwQ1DjQ/exec'; 
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); // Impede envio automático para validação
-  const nome = form.nome.value.trim();
-  const email = form.email.value.trim();
-  const msg = form.mensagem.value.trim();
-//verifica se todos os campos foram preenchidos
-  if (!nome || !email || !msg) {
-    alert("Por favor, preencha todos os campos!");
-    return;
-  }
+    e.preventDefault(); // Impede envio automático
 
-  alert("Mensagem enviada com sucesso!");
-  form.reset();// limpa o campo
+    // 1. Coleta e validação
+    const nome = form.nome.value.trim();
+    const email = form.email.value.trim();
+    const mensagem = form.mensagem.value.trim();
+    // Corrigi o erro de referência: deve ser form.mensagem, não apenas 'mensagem' 
+
+    if (!nome || !email || !msg) {
+        alert("Por favor, preencha todos os campos!");
+        return; // Sai da função se a validação falhar
+    }
+
+    // 2. Prepara os dados para envio
+    // O objeto FormData coleta todos os campos do formulário (usando seus atributos 'name')
+    const formData = new FormData(form);
+
+    // 3. Envia os dados para o Google Apps Script
+    fetch(googleScriptURL, {
+        method: 'POST',
+        // O body deve ser o FormData para que o Apps Script receba corretamente
+        body: formData 
+    })
+    .then(response => {
+        // Verifica se a resposta HTTP é OK, antes de tentar ler o JSON
+        if (!response.ok) {
+            throw new Error('Erro na rede ou no servidor do Apps Script: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Verifica se o Apps Script retornou sucesso (result: 'success')
+        if (data.result === 'success') {
+            alert("Mensagem enviada e salva com sucesso!");
+            form.reset(); // limpa o campo
+        } else {
+            alert("Erro ao salvar dados no Google Sheets: " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Erro de submissão:', error);
+        alert("Ocorreu um erro ao tentar enviar a mensagem. Verifique a URL do script e as permissões.");
+    });
 });
 
 /*--------------------------BOTÃO VOLTAR AO TOPO--------------------------------*/
