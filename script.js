@@ -9,7 +9,7 @@ document.addEventListener("scroll", () => {
 
   sections.forEach(sec => {
     const top = window.scrollY;
-    const offset = sec.offsetTop - 150;
+    const offset = sec.offsetTop - 200;
     const height = sec.offsetHeight;
     const id = sec.getAttribute("id");
 
@@ -29,31 +29,28 @@ document.addEventListener("scroll", () => {
 
 /*--------------------------VALIDAÇÃO DO FORMULÁRIO--------------------------------*/
 const form = document.querySelector("form");
-// ATENÇÃO: Substitua pelo link gerado após Implantação (Deploy) do Apps Script!
 const googleScriptURL = 'https://script.google.com/macros/s/AKfycbzr7qg_nMxMsbbRk2G17IoPX1r4oMB2ShklJNGct5da77BRxJg7pgahkfUbdHIHwQ1DjQ/exec'; 
 
 form.addEventListener("submit", (e) => {
     e.preventDefault(); // Impede envio automático
 
-    // 1. Coleta e validação
+    // Coleta e validação
     const nome = form.nome.value.trim();
     const email = form.email.value.trim();
     const mensagem = form.mensagem.value.trim();
     // Corrigi o erro de referência: deve ser form.mensagem, não apenas 'mensagem' 
 
-    if (!nome || !email || !msg) {
+    if (!nome || !email || !mensagem) {
         alert("Por favor, preencha todos os campos!");
         return; // Sai da função se a validação falhar
     }
 
-    // 2. Prepara os dados para envio
-    // O objeto FormData coleta todos os campos do formulário (usando seus atributos 'name')
+    // FormData coleta todos os campos do formulário
     const formData = new FormData(form);
 
-    // 3. Envia os dados para o Google Apps Script
+    // Envia os dados para o Google Apps Script
     fetch(googleScriptURL, {
-        method: 'POST',
-        // O body deve ser o FormData para que o Apps Script receba corretamente
+        method: 'POST', 
         body: formData 
     })
     .then(response => {
@@ -78,60 +75,14 @@ form.addEventListener("submit", (e) => {
     });
 });
 
-/*--------------------------BOTÃO VOLTAR AO TOPO--------------------------------*/
-
-const btnTopo = document.createElement("button");
-btnTopo.innerText = "↑";// icone botão
-btnTopo.classList.add("btn-topo");
-document.body.appendChild(btnTopo);
-
-//mostra o botão ao rolar a pagina
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    btnTopo.classList.add("visivel");
-  } else {
-    btnTopo.classList.remove("visivel");
-  }
-});
-
-//ação do clique - rolagem até o topo
-btnTopo.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-/*--------------------------MODO CLARO/ESCURO--------------------------------*/
-
-const toggleTema = document.createElement("button");
-toggleTema.innerHTML = "🌙"; // Ícone inicial
-toggleTema.classList.add("tema-btn");
-document.body.appendChild(toggleTema);
-
-// Define botão fixo 
-toggleTema.style.position = "fixed";
-toggleTema.style.top = "20px";
-toggleTema.style.right = "25px";
-toggleTema.style.zIndex = "1100";
-
-// Evento de clique para alternar o tema 
-toggleTema.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-
-  //Altera o ícone conforme o modo
-  if (document.body.classList.contains("dark-mode")) {
-    toggleTema.innerHTML = "☀️"; // Sol → modo escuro ativo
-  } else {
-    toggleTema.innerHTML = "🌙"; // Lua → modo claro ativo
-  }
-});
-
-// ======== SIMULAÇÃO DE IRRIGAÇÃO AUTOMÁTICA ========
+/*-------------------------SIMULAÇÃO DE IRRIGAÇÃO AUTOMÁTICA --------------------------------*/
 
 const umidadeSpan = document.getElementById("umidade"); 
 const progressBar = document.getElementById("progressBar");
 const statusText = document.getElementById("status");
 const botao = document.getElementById("iniciarBtn");
 
-if (botao) {
+if (botao && umidadeSpan && progressBar && statusText) {
   botao.addEventListener("click", () => {
     let umidade = 0;
     statusText.textContent = "Status: Medindo umidade do solo...";
@@ -157,7 +108,7 @@ if (botao) {
       if (umidade >= 100) {
         clearInterval(intervalo);
         botao.disabled = false;
-        botao.textContent = "Reiniciar Simulação";
+        botao.textContent = "Reiniciar Simulação 🔄";
         statusText.textContent = "Simulação concluída ✔️";
       }
     }, 800);
