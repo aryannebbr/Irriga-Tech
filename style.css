@@ -15,6 +15,14 @@
     --BRANCO-PURO: rgb(255, 255, 255); /* para destacar cards */
     --PRETO-TITULOS: rgb(34, 34, 34); /* Textos */
     --CINZA-TEXTO: rgb(70, 70, 70); /* Textos e detalhes */
+   
+    :root {
+    /* Definições de cores que faltavam */
+  --AZUL-MARINHO: #034370;
+  --VERDE-DESTAQUE: #00876F; /* Usando o verde mais vivo para o destaque e o botão */
+  --CINZA-TEXTO: #333;
+  --BRANCO-PURO: #FFF;
+}
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
