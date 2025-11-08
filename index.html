@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para deixar o site adaptado a todos os tipos de tela (deixar responsivo) -->
     <title>Irriga Tech</title> <!--Título que aparecerá na aba do navegador-->
     <link rel="stylesheet" href="style.css"> <!-- Para incluir um arquivo de estilos CSS externo -->
-    <link rel="shortcut icon" href="imgaba.png" type="image/x-icon">
-
-    
+    <link rel="shortcut icon" href="img-aba.png" type="image/x-icon">
 </head>
 <body>
     <!--------------------------------------------------------CABEÇALHO---------------------------------------------------------------------->
@@ -42,17 +40,22 @@
       <h2>Sobre a Irriga Tech</h2> <!--É o subtítulo da seção -->
       <p>A Irriga Tech oferece soluções de irrigação inteligente para hortas domésticas e plantas em apartamentos.</p>
 
+   <!-- Container que agrupa todos os cards -->
+   <div class="empresa-cards">
+
+    <div class="card">
       <h3>Missão</h3> <!--Precisamos definir a Missão da empresa-->
       <p>Nossa missão é desenvolver soluções tecnológicas que tornem o cuidado com a
          natureza mais simples, inteligente e acessível. Buscamos unir sustentabilidade e
          inovação por meio de sistemas automatizados de irrigação que monitoram e
          cuidam do solo de forma autônoma, garantindo o uso responsável da água e o
-         bem-estar das plantas.
+         bem-estar das plantas. </p>
          <p>Queremos facilitar a vida das pessoas, oferecendo
          praticidade e eficiência para que qualquer um possa manter seus espaços verdes
          sempre saudáveis, mesmo na correria do dia a dia.</p>
-</p> <!--Parágrafo de descrição da Missão da empresa-->
+    </div>
 
+      <div class="card">
       <h3>Visão</h3> <!--Precisamos definir a Visão da empresa-->
       <p>Ser reconhecida como uma das principais soluções em automação sustentável,
       referência em sistemas de irrigação inteligentes no Brasil. Almejamos contribuir
@@ -62,8 +65,10 @@
       <p>Buscamos estar sempre à frente em inovação, oferecendo
       soluções acessíveis, confiáveis e de impacto positivo para pessoas e empresas
       que desejam cuidar melhor do planeta.</p>
-</p> <!--Parágrafo de descrição da Visão da empresa-->
+      </div>
 
+      <div class="card valores">
+      
        <h3>Valores</h3>
             <ul> <!-- Lista não ordenada -->
                 <li><br>Inovação</li> <!--subtópico de descrição-->
@@ -84,13 +89,16 @@
                 <li><br>Qualidade</li> <!--subtópico de descrição-->
                 <p>Prezamos por excelência em nossos produtos, serviços e
                 relacionamentos, garantindo confiança e satisfação aos usuários.</p>
-      </ul>
+            </ul>
+         </div>
      </section>
 
    <!--------SEÇÃO SOBRE O PRODUTO----->
 <section id="produto">
   <h2>Nosso Produto</h2>
   <p>O sistema Irriga Tech monitora e irriga automaticamente suas plantas com base na umidade do solo, usando sensores IoT.</p>
+
+  <img src="img-produto/prototipo.jpg" alt="Protótipo do sistema Irriga Tech com sensores no solo">
 </section>
 
    <!-- SEÇÃO SIMULADOR DE IRRIGAÇÃO -->
@@ -100,7 +108,7 @@
   <p><strong>Umidade do solo:</strong> <span id="umidade">--</span>%</p> <!---<strong> deixa o texto em negrito, destacando “Umidade do solo”.-->
   <div id="progressBarContainer"> <!--<div id="progressBarContainer"> é o container (caixa externa) da barra.-->
     <div id="progressBar"></div> <!--<div id="progressBar"></div> é a barra em si, que o JavaScript vai aumentar ou diminuir conforme o nível de umidade.
-— Exemplo: se a umidade for 80%, a largura da barra será 80%.-->
+<-- Exemplo: se a umidade for 80%, a largura da barra será 80%.-->
   </div>
   <p id="status">Status: Aguardando início...</p> <!--Mostra o estado atual da simulação.-->
 <button id="iniciarBtn">Iniciar Simulação</button> <!--Cria um botão que o usuário pode clicar para iniciar a simulação.
@@ -113,69 +121,69 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 
      <h2>Equipe de Desenvolvimento</h2><!--Apresentação de cada um dos integrantes da equipe-->
       <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="imagens/membro1.jpg" alt="Foto de membro da equipe"><br>
+       <img src="img-membros/foto-Aryanne.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Aryanne Baptistin Barbosa Ribeiro</h3>
          <p>Front-End Developer</p>
       </article>
 
       <article class="membro"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-        <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+        <img src="img-membros/foto-Gabriel.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Gabriel de Santana Santos</h3>
          <p>Documentação</p>
       </article> 
 
       <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+       <img src="img-membros/foto-hugo.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Hugo Arrais de Moura Silva</h3>
          <p>Front-End Developer</p>
       </article>
 
       <article class="membro"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
        <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
-        <h3>Julia Cristina da Costa</h3>
+        <h3>Júlia Cristina da Costa</h3>
          <p>Front-End Developer</p>
       </article> 
 
       <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+       <img src="img-membros/foto-Júlio.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Júlio Cézar de Sousa Barbosa</h3>
          <p>Front-End Developer</p>
       </article>
 
       <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+       <img src="img-membros/foto-Kamily.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Kamily Silva da Rocha</h3>
          <p>Documentação</p>
       </article>
 
       <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+       <img src="img-membros/foto-Matheus.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Matheus Porto</h3>
          <p>IoT</p>
       </article>
 
       <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+       <img src="img-membros/foto-Raphael.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Raphael Morais da Silva</h3>
          <p>IoT</p>
       </article>
 
       <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+       <img src="img-membros/foto-Thiago.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Thiago Aparecido Oliveira de Araujo</h3>
          <p>IoT</p>
       </article>
 
       <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+       <img src="img-membros/foto-Vinicius.jpeg" alt="Foto de membro da equipe"><br>
         <h3>Vinicius Vieira Lionel</h3>
          <p>IoT</p>
       </article>
 
     </section>
+
      <!-------------------------------------------------------FORMULÁRIO---------------------------------------------------------------->
      <section id="contato">
-     <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
 
        <h2>Entre em Contato</h2><!--Formulário para que o usuário entre em contato conosco-->
        <form id="meuFormulario">
@@ -188,7 +196,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
         </form>
         <script>
   const form = document.getElementById('meuFormulario');
-  const googleScriptURL = 'https://script.google.com/macros/s/AKfycbzr7qg_nMxMsbbRk2G17IoPX1r4oMB2ShklJNGct5da77BRxJg7pgahkfUbdHIHwQ1DjQ/exec'; // Cole a URL copiada aqui
+  const googleScriptURL = 'https://script.google.com/macros/s/AKfycbzr7qg_nMxMsbbRk2G17IoPX1r4oMB2ShklJNGct5da77BRxJg7pgahkfUbdHIHwQ1DjQ/exec';
 
   form.addEventListener('submit', function(e) {
     e.preventDefault(); // Impede o envio padrão
@@ -213,9 +221,8 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 </script>
     </section>
    </main>
-
+   
    <!---------------------------------------------------RODAPÉ DA PÁGINA--------------------------------------------------------------->
-
    <footer> <!--Usaremos essa tag para definir o rodapé da página web-->
      <p>&copy; 2025 Irriga Tech. Todos os direitos reservados.</p> <!-- Tag usada para colocar Direitos autorais a página-->
    </footer>
@@ -223,5 +230,6 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
    <!-------------------------------------------------------SCRIPTS-------------------------------------------------------------------->
  <!---Para importarmos o arquivo de JavaScript a página--->
    <script src="script.js"></script>
- </body>
 
+ </body>
+</html>
