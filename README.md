@@ -9,6 +9,7 @@ Os dados inseridos pelos usuários no formulário são salvos diretamente em uma
 * **Destino dos Dados (Google Sheet):** Os dados são enviados via API (Apps Script) para a planilha.
 * **Link da Planilha:** [Planilha Google de Submissões](https://docs.google.com/spreadsheets/d/1D14ZF-UT5W2SVEJSPkjedMWF9_XLX0nREO8G6D-fj_eg/edit?usp=sharing)
 
+
 * Aqui está o código inserido no AppScript para vincular o furmulário à planilha e, ao site:
 
 /**
