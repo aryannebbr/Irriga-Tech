@@ -38,7 +38,7 @@
      <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
 
       <h2>Sobre a Irriga Tech</h2> <!--É o subtítulo da seção -->
-      <p>A Irriga Tech oferece soluções de irrigação inteligente para hortas domésticas e plantas em apartamentos.</p>
+      <p>A Irriga Tech oferece soluções de irrigação inteligente para hortas domésticas e plantas em apartamentos. Por meio de sensores de umidade e automação, nosso sistema identifica a necessidade real de água no solo e realiza a irrigação de forma precisa. Dessa forma, evitamos desperdícios, garantimos plantas mais saudáveis e facilitamos a rotina de quem deseja cuidar do verde com praticidade e sustentabilidade.</p>
 
    <!-- Container que agrupa todos os cards -->
    <div class="empresa-cards">
@@ -101,7 +101,7 @@
   <img src="img-produto/prototipo.jpg" alt="Protótipo do sistema Irriga Tech com sensores no solo">
 </section>
 
-   <!-- SEÇÃO SIMULADOR DE IRRIGAÇÃO -->
+<!---------- SEÇÃO SIMULADOR DE IRRIGAÇÃO ------------->
 <section id="simulador">
   <h2>Simulação de Irrigação <em>Automática</em></h2> <!--"Simulação de Irrigação Automática” será o título principal do simulador--->
   <p>Veja abaixo como nosso sistema de irrigação inteligente reage à variação da umidade do solo.</p><!---Explica ao usuário o que o simulador faz — mostra como o sistema reage à mudança de umidade-->
@@ -115,121 +115,184 @@
 O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e começar a alterar os valores na tela.-->
 </section>
 
-     <!------SEÇÃO EQUIPE DE DESENVOLVIMENTO------>
-      <section id="time">
-      <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
+<!----------SEÇÃO EQUIPE DE DESENVOLVIMENTO------------->
+<section id="time"> <!--Essa tag <section id=> será utilizada para atribuir conteúdo semântico relacionado à secção do id que estiver atrelado a ela -->
+  <h2>Equipe de Desenvolvimento</h2><!--Apresentação de cada um dos integrantes da equipe-->
 
-     <h2>Equipe de Desenvolvimento</h2><!--Apresentação de cada um dos integrantes da equipe-->
-      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="img-membros/foto-Aryanne.jpeg" alt="Foto de membro da equipe"><br>
+   <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="img-membros/foto-Aryanne.jpeg" alt="Foto de membro da equipe">
         <h3>Aryanne Baptistin Barbosa Ribeiro</h3>
-         <p>Front-End Developer</p>
-      </article>
+        <p>Front-End Developer</p>
+      </div>
+      
+      <div class="card-back">
+        <h3>Função</h3>
+        <p>...</p>
+      </div>
+    </div>
+  </article>
 
-      <article class="membro"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-        <img src="img-membros/foto-Gabriel.jpeg" alt="Foto de membro da equipe"><br>
-        <h3>Gabriel de Santana Santos</h3>
-         <p>Documentação</p>
-      </article> 
-
-      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="img-membros/foto-hugo.jpeg" alt="Foto de membro da equipe"><br>
-        <h3>Hugo Arrais de Moura Silva</h3>
-         <p>Front-End Developer</p>
-      </article>
-
-      <article class="membro"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
-        <h3>Júlia Cristina da Costa</h3>
-         <p>Front-End Developer</p>
-      </article> 
-
-      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="img-membros/foto-Júlio.jpeg" alt="Foto de membro da equipe"><br>
-        <h3>Júlio Cézar de Sousa Barbosa</h3>
-         <p>Front-End Developer</p>
-      </article>
-
-      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="img-membros/foto-Kamily.jpeg" alt="Foto de membro da equipe"><br>
-        <h3>Kamily Silva da Rocha</h3>
-         <p>Documentação</p>
-      </article>
-
-      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="img-membros/foto-Matheus.jpeg" alt="Foto de membro da equipe"><br>
-        <h3>Matheus Porto</h3>
-         <p>IoT Developer</p>
-      </article>
-
-      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="img-membros/foto-Raphael.jpeg" alt="Foto de membro da equipe"><br>
-        <h3>Raphael Morais da Silva</h3>
-         <p>IoT Developer</p>
-      </article>
-
-      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="img-membros/foto-Thiago.jpeg" alt="Foto de membro da equipe"><br>
-        <h3>Thiago Aparecido Oliveira de Araujo</h3>
-         <p>IoT Developer</p>
-      </article>
-
-      <article class="membro"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
-       <img src="img-membros/foto-Vinicius.jpeg" alt="Foto de membro da equipe"><br>
-        <h3>Vinicius Vieira Lionel</h3>
-         <p>IoT Developer</p>
-      </article>
-
-    </section>
-
-     <!-------------------------------------------------------FORMULÁRIO---------------------------------------------------------------->
-     <section id="contato">
-
-       <h2>Entre em Contato</h2><!--Formulário para que o usuário entre em contato conosco-->
-       <form id="meuFormulario">
-  <input type="text" name="nome" placeholder="Seu Nome" required>
-  <input type="email" name="email" placeholder="Seu Email" required>
-
-  <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
-
-  <button type="submit">Enviar</button> <!--Tag do botão de "Enviar" o formulário -->
-        </form>
-        <script>
-  const form = document.getElementById('meuFormulario');
-  const googleScriptURL = 'https://script.google.com/macros/s/AKfycbzr7qg_nMxMsbbRk2G17IoPX1r4oMB2ShklJNGct5da77BRxJg7pgahkfUbdHIHwQ1DjQ/exec';
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Impede o envio padrão
-
-    const formData = new FormData(form);
+<article class="membro card-flip"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="img-membros/foto-Gabriel.jpeg" alt="Foto de membro da equipe"><br>
+      <h3>Gabriel de Santana Santos</h3>
+      <p>Documentação</p>
+    </div>
     
-    fetch(googleScriptURL, {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Sucesso!', data);
-      alert('Dados enviados com sucesso!');
-      form.reset(); // Opcional: limpa o formulário
-    })
-    .catch(error => {
-      console.error('Erro:', error);
-      alert('Ocorreu um erro ao enviar os dados.');
-    });
-  });
-</script>
-    </section>
-   </main>
-   
-   <!---------------------------------------------------RODAPÉ DA PÁGINA--------------------------------------------------------------->
-   <footer> <!--Usaremos essa tag para definir o rodapé da página web-->
-     <p>&copy; 2025 Irriga Tech. Todos os direitos reservados.</p> <!-- Tag usada para colocar Direitos autorais a página-->
-   </footer>
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article> 
 
-   <!-------------------------------------------------------SCRIPTS-------------------------------------------------------------------->
+<article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="img-membros/foto-hugo.jpeg" alt="Foto de membro da equipe"><br>
+      <h3>Hugo Arrais de Moura Silva</h3>
+      <p>Front-End Developer</p>
+    </div>
+    
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article>
+
+<article class="membro card-flip"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="membro1.jpg" alt="Foto de membro da equipe"><br>
+      <h3>Júlia Cristina da Costa</h3>
+      <p>Front-End Developer</p>
+    </div>
+    
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article> 
+
+<article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="img-membros/foto-Júlio.jpeg" alt="Foto de membro da equipe"><br>
+      <h3>Júlio Cézar de Sousa Barbosa</h3>
+      <p>Front-End Developer</p>
+    </div>
+
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article>
+
+<article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="img-membros/foto-Kamily.jpeg" alt="Foto de membro da equipe"><br>
+      <h3>Kamily Silva da Rocha</h3>
+      <p>Documentação</p>
+    </div>
+    
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article>
+
+<article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="img-membros/foto-Matheus.jpeg" alt="Foto de membro da equipe"><br>
+      <h3>Matheus Porto</h3>
+      <p>IoT</p>
+    </div>
+ 
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article>
+
+<article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="img-membros/foto-Raphael.jpeg" alt="Foto de membro da equipe"><br>
+      <h3>Raphael Morais da Silva</h3>
+      <p>IoT</p>
+    </div>
+
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article>
+
+<article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="img-membros/foto-Thiago.jpeg" alt="Foto de membro da equipe"><br>
+      <h3>Thiago Aparecido Oliveira de Araujo</h3>
+      <p>IoT</p>
+    </div>
+
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article>
+
+<article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="img-membros/foto-Vinicius.jpeg" alt="Foto de membro da equipe"><br>
+      <h3>Vinicius Vieira Lionel</h3>
+      <p>IoT</p>
+    </div>
+
+    <div class="card-back">
+      <h3>Função</h3>
+      <p>...</p>
+    </div>
+  </div>
+</article>
+
+</section>
+
+  <!-------------------------------------------------------FORMULÁRIO---------------------------------------------------------------->
+  <section id="contato">
+    
+    <h2>Entre em Contato</h2><!--Formulário para que o usuário entre em contato conosco-->
+    <form id="meuFormulario">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu Email" required>
+      <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit">Enviar</button> <!--Tag do botão de "Enviar" o formulário -->
+    </form>
+  </section>
+</main>
+
+<!---------------------------------------------------RODAPÉ DA PÁGINA--------------------------------------------------------------->
+<footer> <!--Usaremos essa tag para definir o rodapé da página web-->
+  <p>&copy; 2025 Irriga Tech. Todos os direitos reservados.</p> <!-- Tag usada para colocar Direitos autorais a página-->
+</footer>
+
+<!-------------------------------------------------------SCRIPTS-------------------------------------------------------------------->
  <!---Para importarmos o arquivo de JavaScript a página--->
-   <script src="script.js"></script>
+ <script src="script.js"></script>
+ <script  src="api.js"></script>
 
- </body>
+</body>
 </html>
