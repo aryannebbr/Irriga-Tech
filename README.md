@@ -23,7 +23,7 @@ function doPost(e) {
   
   // Obtém a planilha ativa (a planilha vinculada a este script)
   var ss = SpreadsheetApp.getActiveSpreadsheet();
-  // Obtém a primeira aba/folha da planilha. Se sua aba tiver outro nome, altere 'Sheet1'.
+  // Obtém a primeira aba/folha da planilha.
   var sheet = ss.getSheets()[0]; 
   
   // --- Processamento de Dados ---
@@ -34,8 +34,7 @@ function doPost(e) {
   // Adiciona um carimbo de data/hora da submissão
   var timestamp = new Date();
   
-  // Array com os valores a serem inseridos, na ordem das colunas da sua planilha.
-  // **VERIFIQUE SE ESTA ORDEM CORRESPONDE ÀS SUAS COLUNAS!**
+  // Array com os valores a serem inseridos, na ordem das colunas da planilha.
   var newRow = [
     timestamp,
     formValues.nome,      
@@ -46,9 +45,9 @@ function doPost(e) {
   // Insere a nova linha de dados no final da planilha
   sheet.appendRow(newRow);
 
-  // --- Resposta ao Cliente (Seu JavaScript) ---
+  // --- Resposta ao Cliente (JavaScript) ---
   
-  // Cria uma resposta JSON de sucesso que seu JavaScript pode ler
+  // Cria uma resposta JSON de sucesso que o JavaScript pode ler
   return ContentService.createTextOutput(JSON.stringify({
       result: 'success',
       message: 'Dados salvos com sucesso no Google Sheets.'
