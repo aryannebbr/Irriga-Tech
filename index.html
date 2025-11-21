@@ -39,6 +39,8 @@
 
       <h2>Sobre a Irriga Tech</h2> <!--É o subtítulo da seção -->
       <p>A Irriga Tech oferece soluções de irrigação inteligente para hortas domésticas e plantas em apartamentos. Por meio de sensores de umidade e automação, nosso sistema identifica a necessidade real de água no solo e realiza a irrigação de forma precisa. Dessa forma, evitamos desperdícios, garantimos plantas mais saudáveis e facilitamos a rotina de quem deseja cuidar do verde com praticidade e sustentabilidade.</p>
+    
+    <img src="Imagem-empresa.jpeg" alt="Imagem da empresa">
 
    <!-- Container que agrupa todos os cards -->
    <div class="empresa-cards">
@@ -96,9 +98,74 @@
    <!--------SEÇÃO SOBRE O PRODUTO----->
 <section id="produto">
   <h2>Nosso Produto</h2>
-  <p>O sistema Irriga Tech monitora e irriga automaticamente suas plantas com base na umidade do solo, usando sensores IoT.</p>
+ <div style="
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #121212; 
+    color: #f0f0f0; 
+    padding: 25px; 
+    border-radius: 12px; 
+    border: 1px solid #333; 
+    max-width: 800px; 
+    margin: 0 auto;">
 
-  <img src="img-produto/prototipo.jpg" alt="Protótipo do sistema Irriga Tech com sensores no solo">
+  <div style="margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+    <h2 style="color: #4CAF50; margin-top: 0;">🌱 BioSystem: Descrição do Produto</h2>
+    <p style="line-height: 1.6; color: #cccccc; font-size: 1.05em;">
+      O <strong>BioSystem</strong> é uma solução inteligente de IoT projetada para transformar o cuidado com plantas em uma experiência autônoma. Ao integrar monitoramento de precisão com irrigação automatizada, o sistema elimina a necessidade de regas manuais diárias.
+    </p>
+  </div>
+
+  <div style="
+      background-color: #ffffff; 
+      color: #333333; 
+      padding: 25px; 
+      border-radius: 8px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+      margin-bottom: 35px;">
+    
+    <h3 style="color: #2E7D32; border-left: 5px solid #2E7D32; padding-left: 12px; margin-top: 0;">⚙️ Como funciona</h3>
+    
+    <ul style="color: #333; line-height: 1.7; margin-bottom: 0; padding-left: 20px;">
+      <li style="margin-bottom: 10px;"><strong>Monitoramento:</strong> Um sensor mede continuamente a umidade do solo.</li>
+      <li style="margin-bottom: 10px;"><strong>Decisão Automática:</strong> Se a umidade cair abaixo do ideal, o módulo de controle aciona a bomba.</li>
+      <li><strong>Irrigação Precisa:</strong> A água é liberada até que o nível programado seja atingido.</li>
+    </ul>
+  </div>
+
+  <div style="margin-bottom: 40px;">
+    <h3 style="color: #fff; border-left: 4px solid #4CAF50; padding-left: 12px;">🛠️ Aplicações e Instalação</h3>
+    
+    <p style="color: #bbb; margin-bottom: 20px;">
+      <strong>Aplicações:</strong> Vasos individuais, hortas verticais, jardins internos e estufas.
+    </p>
+
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      
+      <div style="background-color: #1e1e1e; padding: 15px 20px; border-radius: 6px; border-left: 4px solid #66bb6a;">
+        <strong style="color: #fff; display: block; margin-bottom: 5px;">1. Posicionamento do Sensor</strong>
+        <span style="color: #ccc; font-size: 0.95em;">Coloque o sensor no solo, próximo à raiz.</span><br>
+        <span style="color: #ffcc80; font-size: 0.9em; font-style: italic;">⚠️ Cuidado: A parte eletrônica superior não pode molhar.</span>
+      </div>
+
+      <div style="background-color: #1e1e1e; padding: 15px 20px; border-radius: 6px; border-left: 4px solid #66bb6a;">
+        <strong style="color: #fff; display: block; margin-bottom: 5px;">2. Instalação Hidráulica</strong>
+        <span style="color: #ccc; font-size: 0.95em;">Mergulhe a bomba no reservatório e leve a mangueira ao vaso.</span>
+      </div>
+
+      <div style="background-color: #1e1e1e; padding: 15px 20px; border-radius: 6px; border-left: 4px solid #66bb6a;">
+        <strong style="color: #fff; display: block; margin-bottom: 5px;">3. Verificação</strong>
+        <span style="color: #ccc; font-size: 0.95em;">Mantenha o reservatório cheio. Cuidado com o efeito sifão.</span>
+      </div>
+
+      <div style="background-color: #1e1e1e; padding: 15px 20px; border-radius: 6px; border-left: 4px solid #66bb6a;">
+        <strong style="color: #fff; display: block; margin-bottom: 5px;">4. Conexão</strong>
+        <span style="color: #ccc; font-size: 0.95em;">Ligue o módulo (Arduino/ESP). O sistema iniciará automaticamente.</span>
+      </div>
+      
+    </div>
+  </div>
+  
+<img src="img-produto/prototipo.jpg" alt="Protótipo do sistema Irriga Tech com sensores no solo">
 </section>
 
 <!---------- SEÇÃO SIMULADOR DE IRRIGAÇÃO ------------->
@@ -122,7 +189,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
    <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
     <div class="card-inner">
       <div class="card-front">
-        <img src="img-membros/foto-Aryanne.jpeg" alt="Foto de membro da equipe">
+        <img src="img-membros/foto-Aryanne.jpg" alt="Foto de membro da equipe">
         <h3>Aryanne Baptistin Barbosa Ribeiro</h3>
         <p>Front-End Developer</p>
       </div>
@@ -137,7 +204,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 <article class="membro card-flip"><!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
   <div class="card-inner">
     <div class="card-front">
-      <img src="img-membros/foto-Gabriel.jpeg" alt="Foto de membro da equipe"><br>
+      <img src="img-membros/foto-Gabriel.jpg" alt="Foto de membro da equipe"><br>
       <h3>Gabriel de Santana Santos</h3>
       <p>Documentação</p>
     </div>
@@ -152,7 +219,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
   <div class="card-inner">
     <div class="card-front">
-      <img src="img-membros/foto-hugo.jpeg" alt="Foto de membro da equipe"><br>
+      <img src="img-membros/foto-hugo.jpg" alt="Foto de membro da equipe"><br>
       <h3>Hugo Arrais de Moura Silva</h3>
       <p>Front-End Developer</p>
     </div>
@@ -182,7 +249,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
   <div class="card-inner">
     <div class="card-front">
-      <img src="img-membros/foto-Júlio.jpeg" alt="Foto de membro da equipe"><br>
+      <img src="img-membros/foto-Júlio.jpg" alt="Foto de membro da equipe"><br>
       <h3>Júlio Cézar de Sousa Barbosa</h3>
       <p>Front-End Developer</p>
     </div>
@@ -197,7 +264,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
   <div class="card-inner">
     <div class="card-front">
-      <img src="img-membros/foto-Kamily.jpeg" alt="Foto de membro da equipe"><br>
+      <img src="img-membros/foto-Kamily.jpg" alt="Foto de membro da equipe"><br>
       <h3>Kamily Silva da Rocha</h3>
       <p>Documentação</p>
     </div>
@@ -212,7 +279,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
   <div class="card-inner">
     <div class="card-front">
-      <img src="img-membros/foto-Matheus.jpeg" alt="Foto de membro da equipe"><br>
+      <img src="img-membros/foto-Matheus.jpg" alt="Foto de membro da equipe"><br>
       <h3>Matheus Porto</h3>
       <p>IoT</p>
     </div>
@@ -227,7 +294,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
   <div class="card-inner">
     <div class="card-front">
-      <img src="img-membros/foto-Raphael.jpeg" alt="Foto de membro da equipe"><br>
+      <img src="img-membros/foto-Raphael.jpg" alt="Foto de membro da equipe"><br>
       <h3>Raphael Morais da Silva</h3>
       <p>IoT</p>
     </div>
@@ -242,7 +309,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
   <div class="card-inner">
     <div class="card-front">
-      <img src="img-membros/foto-Thiago.jpeg" alt="Foto de membro da equipe"><br>
+      <img src="img-membros/foto-Thiago.jpg" alt="Foto de membro da equipe"><br>
       <h3>Thiago Aparecido Oliveira de Araujo</h3>
       <p>IoT</p>
     </div>
@@ -257,7 +324,7 @@ O JavaScript vai detectar o clique nesse botão (usando o id="iniciarBtn") e com
 <article class="membro card-flip"> <!--Usaremos a tag <article class=> para definir um conteúdo autocontido e independente da página web-->
   <div class="card-inner">
     <div class="card-front">
-      <img src="img-membros/foto-Vinicius.jpeg" alt="Foto de membro da equipe"><br>
+      <img src="img-membros/foto-Vinicius.jpg" alt="Foto de membro da equipe"><br>
       <h3>Vinicius Vieira Lionel</h3>
       <p>IoT</p>
     </div>
