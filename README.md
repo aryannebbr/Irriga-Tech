@@ -1,65 +1,60 @@
-# 🔗 Integração do Formulário com o Google Sheets
+# Irriga-Tech 🌿 | Monitoramento Inteligente
 
-Este repositório contém o código-fonte do formulário HTML/CSS/JS que se conecta com o Google Apps Script para salvar dados.
+> Uma solução integrada de IoT e Web para gestão eficiente de irrigação, utilizando automação com Google Apps Script.
 
-### 💾 Sobre a Persistência de Dados
+---
 
-Os dados inseridos pelos usuários no formulário são salvos diretamente em uma Planilha Google, que atua como nosso banco de dados.
+## 🚀 Sobre o Projeto
 
-* **Destino dos Dados (Google Sheet):** Os dados são enviados via API (Apps Script) para a planilha.
-* **Link da Planilha:** [Planilha Google de Submissões](https://docs.google.com/spreadsheets/d/1D14ZF-UT5W2SVEJSPkjedMWF9_XLX0nREO8G6D-fj_eg/edit?usp=sharing)
+O **Irriga-Tech** é um sistema multidisciplinar que une hardware e software para monitorar a umidade do solo. O diferencial técnico deste repositório é a integração do front-end com o **Google Sheets via Google Apps Script**, permitindo o armazenamento de dados sem a necessidade de um servidor de banco de dados complexo.
 
+### Minha Atuação:
+Atuei como **UX/UI Designer** e **Desenvolvedora Front-end**, sendo responsável por:
+* Prototipagem de alta fidelidade e design responsivo.
+* Implementação da lógica de envio de dados e integração com a API do Google.
 
-* Aqui está o código inserido no AppScript para vincular o furmulário à planilha e, ao site:
+---
 
-/**
- * Função principal que é acionada por uma solicitação HTTP POST (envio do formulário).
- * Recebe os dados do formulário e os insere na planilha.
- *
- * @param {Object} e - Objeto de evento que contém os parâmetros (dados do formulário).
- */
-function doPost(e) {
-  // --- Configuração ---
-  
-  // Obtém a planilha ativa (a planilha vinculada a este script)
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  // Obtém a primeira aba/folha da planilha.
-  var sheet = ss.getSheets()[0]; 
-  
-  // --- Processamento de Dados ---
-  
-  // Obtém os dados do formulário (as chaves são os atributos 'name' do HTML)
-  var formValues = e.parameter;
-  
-  // Adiciona um carimbo de data/hora da submissão
-  var timestamp = new Date();
-  
-  // Array com os valores a serem inseridos, na ordem das colunas da planilha.
-  var newRow = [
-    timestamp,
-    formValues.nome,      
-    formValues.email,     
-    formValues.mensagem, 
-  ];
+## ⚙️ Diferencial Técnico: Integração com Google Apps Script
 
-  // Insere a nova linha de dados no final da planilha
-  sheet.appendRow(newRow);
+Para este projeto, implementamos uma solução de persistência de dados ágil:
+* **Lógica do Script:** Desenvolvi um script em JavaScript (Google Apps Script) que recebe requisições `POST` do formulário HTML.
+* **Processamento:** O script identifica a planilha ativa, processa os campos recebidos e os insere em novas linhas com carimbo de data/hora (timestamp).
+* **Resposta JSON:** O sistema retorna um feedback em tempo real para o front-end, garantindo uma melhor experiência para o usuário.
 
-  // --- Resposta ao Cliente (JavaScript) ---
-  
-  // Cria uma resposta JSON de sucesso que o JavaScript pode ler
-  return ContentService.createTextOutput(JSON.stringify({
-      result: 'success',
-      message: 'Dados salvos com sucesso no Google Sheets.'
-    }))
-    .setMimeType(ContentService.MimeType.JSON);
-}
+---
 
-/**
- * Função opcional para lidar com solicitações HTTP GET (acesso direto à URL do Apps Script).
- */
-function doGet() {
-  return ContentService.createTextOutput(
-    'O Apps Script está ativo e aguardando submissões POST do seu formulário HTML.'
-  ).setMimeType(ContentService.MimeType.TEXT);
-}
+## 🛠️ Tecnologias e Ferramentas
+
+* **Design:** Figma, Adobe XD e princípios de Design Responsivo.
+* **Front-end:** HTML5, CSS3, JavaScript.
+* **Back-end/Integração:** PHP e Google Apps Script.
+* **Dados:** Google Sheets API.
+
+---
+
+## 📱 Visual do Projeto
+
+Aqui estão algumas capturas de tela da interface e do funcionamento do sistema:
+
+<table>
+  <tr>
+    <td><b>Interface Principal</b></td>
+    <td><b>Formulário de Cadastro</b></td>
+  </tr>
+  <tr>
+    <td><img src="./img-aba.png" width="400" alt="Interface do sistema"></td>
+    <td><img src="./img-formulario.png" width="400" alt="Formulário de entrada"></td>
+  </tr>
+</table>0
+
+> *Nota: A interface foi desenhada com foco em UX, utilizando princípios de design responsivo para garantir acessibilidade em diferentes dispositivos.*
+
+---
+
+## 👤 Contato
+
+**Aryanne Menezes Ribeiro**
+*Analista de Sistemas & UX/UI Designer*
+- [LinkedIn](https://www.linkedin.com/in/aryanne-menezes-01b07a1a2/)
+- [GitHub](https://github.com/aryannebbr)
